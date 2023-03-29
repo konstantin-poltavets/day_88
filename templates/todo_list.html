@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<meta charset="utf-8">
+	<title>TODO List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+	<h1>TODO List</h1>
+	<ul>
+	{% for todo in todos %}
+    <div class="container-fluid" >
+        <a href="{{ url_for('todo_edit', todo_id=todo.id) }} "> {{ todo.task }}</a>
+        {% if todo.complete %}
+        <h4> Done </h4>
+        {% else %}
+        <h4> In Progress </h4>
+        {% endif %}
+
+        <hr>
+    </div>
+	{% endfor %}
+	</ul>
+</body>
+</html>
+

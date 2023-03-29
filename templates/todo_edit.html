@@ -1,0 +1,35 @@
+<h1>Edit Todo</h1>
+
+<!-- <form method="POST">
+    <label for="task">Task:</label>
+    <textarea name="task" rows="4" cols="50">{{ todo.task }}</textarea>
+  
+    <div>
+      {% if todo.complete %}
+      <input type="checkbox" id="check_done" name="check_done" checked>
+      {% else %}
+      <input type="checkbox" id="check_done" name="check_done">
+      {% endif %}
+      <label for="check_done">Done</label>
+    </div>
+  
+    <button type="submit">Save</button>
+  </form>
+   -->
+
+   <form method="POST">
+    <label for="task">Task:</label>
+    <textarea name="task" rows="4" cols="50">{{ todo.task }}</textarea>
+  
+    <div>
+      {% if todo.complete %}
+      <input type="checkbox" id="check_done" name="check_done" checked>
+      {% else %}
+      <input type="checkbox" id="check_done" name="check_done">
+      {% endif %}
+      <label for="check_done">Done</label>
+    </div>
+  
+    <button type="submit">Save</button>
+  </form>
+  
